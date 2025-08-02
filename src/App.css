@@ -1,0 +1,107 @@
+body {
+  background-color: rgb(202, 234, 245);
+}
+
+html {
+  font-size: 62%;
+  font-family: "urbanist";
+}
+
+p,
+a,
+li,
+input {
+  font-size: 1.6rem;
+  letter-spacing: 0.12rem;
+  line-height: 1.5;
+  color: black;
+}
+
+button {
+  padding: 0.8rem 3.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0;
+  background-color: pink;
+  box-shadow: rgb(0 0 0 / 5%);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  margin-left: 1.2rem;
+}
+
+.main-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-form {
+  padding: 1.6rem;
+  background-color: #212f3d;
+  border-radius: 0.6rem;
+  margin: 3.2rem auto;
+
+  form {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  & input {
+    width: 24rem;
+    color: #212f3d;
+    border: 0.1rem solid gray;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+.section-post {
+  width: 90%;
+
+  & ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+
+    & li {
+      background-color: white;
+      padding: 1.2rem;
+      border-radius: 0.3rem;
+      list-style-position: inside;
+      border-left: 0.3rem solid gray;
+    }
+
+    & .btn-delete {
+      background-color: #00a2ff;
+
+      &:hover {
+        color: white;
+        box-shadow: #00a2ff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .section-form form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-post ol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section-post ol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
